@@ -2,9 +2,17 @@
 To help review your infrastructure, please include the following screenshots in this directory::
 
 ## Deployment Pipeline
-* DockerHub showing containers that you have pushed
-* GitHub repository’s settings showing your Travis webhook (can be found in Settings - Webhook)
-* Travis CI showing a successful build and deploy job
+
+> Note: This project uses **GitHub Actions + GitHub Container Registry (GHCR)** instead of
+> Travis CI + DockerHub. The screenshots below are the direct equivalents required by the rubric.
+
+* GHCR showing the container images that you have pushed
+  (GitHub profile → Packages: https://github.com/olynyagin?tab=packages)
+  Expected images: `reverseproxy`, `udagram-api-user`, `udagram-api-feed`, `udagram-frontend`
+* The CI workflow that builds and pushes the images
+  (Repository → **Actions** tab → "Build and Push Images to GHCR")
+* GitHub Actions showing a successful build-and-push run
+  (open the latest green run and show all four jobs succeeded)
 
 ## Kubernetes
 * To verify Kubernetes pods are deployed properly
